@@ -8,7 +8,7 @@ body,td,th,p{
 	line-height: 1.5;
 }
 body {
-	max-width: 1000px;
+	max-width: 1200px;
   margin: auto;
 	background-color: #fdfdfd;
 }
@@ -141,6 +141,7 @@ nav h1 a {
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
 	display: flex;
+	flex-wrap: wrap;
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 25px;
@@ -151,7 +152,7 @@ nav h1 a {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 15px;
+  margin: 15px auto;
   min-height: 380px;
   padding: 25px 30px 25px;
   text-align: left;
