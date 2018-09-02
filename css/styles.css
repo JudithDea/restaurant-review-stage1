@@ -108,7 +108,7 @@ nav h1 a {
 }
 /* ====================== Map ====================== */
 #map {
-  height: 400px;
+  height: 250px;
   width: 100%;
   background-color: #ccc;
 }
@@ -118,8 +118,6 @@ nav h1 a {
   height: 50px;
   background-color: #333;
   align-items: center;
-}
- .filter-options {
   color: white;
   font-size: 1rem;
   font-weight: normal;
@@ -131,12 +129,12 @@ nav h1 a {
 .filter-options select {
   background-color: white;
   border: 1px solid #333;
-  font-size: 11pt;
   height: 35px;
   letter-spacing: 0;
   margin: 25px 10px 10px 10px;
   padding: 0 10px;
-  width: 170px;
+	font-size: 11pt;
+	width: 170px;
 }
 .filter-header{
 	text-align: center;
@@ -159,7 +157,6 @@ nav h1 a {
 	width: 80%;
   padding: 25px 15px 25px;
   text-align: left;
-	color: #444;
 	font-weight: 200;
 	letter-spacing: 0;
 	line-height: 1.3;
@@ -173,16 +170,13 @@ nav h1 a {
 #restaurants-list p {
   margin: 0;
 }
-#restaurant-address {
-	font-size: 11pt;
-}
-#restaurants-list li button {
+.button {
   background-color: #01447e;
   border: none;
   color: #fff;
   display: inline-block;
   font-size: 12px;
-  margin: 15px 0 0;
+  margin: 5px 0 0;
   padding: 8px 30px 10px;
   text-align: center;
   text-decoration: none;
@@ -233,7 +227,6 @@ nav h1 a {
 }
 .restaurant-address {
   font-size: 12pt;
-  margin: 10px 0px;
 }
 #restaurant-cuisine {
   background-color: #333;
@@ -293,6 +286,13 @@ nav h1 a {
 	nav {
 		height: 80px;
 	}
+	#map {
+	  height: 400px;
+	}
+	.filter-options select {
+	  font-size: 11pt;
+	  width: 170px;
+	}
 	#restaurants-list li {
 		width: 40%;
 	}
@@ -306,6 +306,6 @@ nav h1 a {
 /* Styles for widest screen */
 @media screen and (min-width: 1150px){
 	#restaurants-list li {
-		width: 27%;
+		width: 30%;
 	}
 }

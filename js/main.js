@@ -180,12 +180,17 @@ createRestaurantHTML = (restaurant) => {
   li.append(address);
 
   const more = document.createElement('button');
+  more.className = "button";
   more.innerHTML = 'View Details';
-  more.href = DBHelper.urlForRestaurant(restaurant);
+  more.onclick = function() {
+    let url = DBHelper.urlForRestaurant(restaurant);
+    window.location = url;
+  }
   li.append(more)
-
   return li
 }
+
+
 
 /**
  * Add markers for current restaurants to the map.
