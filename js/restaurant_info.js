@@ -150,14 +150,17 @@ createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
   name.innerHTML = review.name;
+  name.style.fontWeight = "bold";
   li.appendChild(name);
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
+  date.style.fontWeight = "bold";
   li.appendChild(date);
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
+  rating.style.fontWeight = "bold";
   li.appendChild(rating);
 
   const comments = document.createElement('p');

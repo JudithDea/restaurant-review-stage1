@@ -24,12 +24,14 @@
     <section>
       <div class="filter-options">
         <p class="filter-header">Filter Results</p>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-          <option value="all">All Neighborhoods</option>
-        </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-          <option value="all">All Cuisines</option>
-        </select>
+          <div class = "filter-items">
+            <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="Filter results by neighborhood">
+              <option value="all">All Neighborhoods</option>
+            </select>
+            <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label="Filter results by cuisine">
+              <option value="all">All Cuisines</option>
+            </select>
+          </div>
       </div>
       <ul id="restaurants-list"></ul>
     </section>

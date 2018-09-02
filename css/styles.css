@@ -40,7 +40,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	color: white;
 	font-weight: bold;
 	padding-top: 15px;
-	padding-left: 25px;
+	text-align: center;
 
 }
 #maincontent {
@@ -126,6 +126,10 @@ nav h1 a {
 	display: block;
 	margin: 0 auto;
 }
+#filter-items {
+	display: flex;
+	flex-wrap: wrap;
+}
 .filter-options select {
   background-color: white;
   border: 1px solid #333;
@@ -136,8 +140,9 @@ nav h1 a {
 	font-size: 11pt;
 	width: 170px;
 }
-.filter-header{
-	text-align: center;
+
+#cuisines-select {
+	margin-bottom: 50px;
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -240,15 +245,15 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 20px 40px 20px;
-  width: 50%;
+  padding: 20px;
+  width: 80%;
 	margin: auto;
 }
 #reviews-container {
-  padding: 30px 40px 80px;
+  padding: 30px;
 }
 #reviews-container h2 {
-  color: #f58500;
+  color: #333;
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
@@ -265,7 +270,7 @@ nav h1 a {
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
+  padding: 20px;
   position: relative;
   width: 85%;
 }
