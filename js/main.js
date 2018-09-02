@@ -165,7 +165,8 @@ createRestaurantHTML = (restaurant) => {
   li.append(image);
 
   const name = document.createElement('p');
-  name.className = 'restaurant-name';
+  // name.className = 'restaurant-name';
+  name.setAttribute("id", "restaurant-name");
   name.innerHTML = restaurant.name;
   li.append(name);
 
@@ -182,9 +183,9 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('button');
   more.className = "button";
   more.innerHTML = 'View Details';
-  more.onclick = function() {
-    let url = DBHelper.urlForRestaurant(restaurant);
-    window.location = url;
+  more.onclick = () => {
+    let restaurantUrl = DBHelper.urlForRestaurant(restaurant);
+    window.location = restaurantUrl;
   }
   li.append(more)
   return li

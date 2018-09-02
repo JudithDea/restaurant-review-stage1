@@ -75,17 +75,17 @@ nav h1 a {
   text-transform: uppercase;
 }
 #breadcrumb {
-    padding: 10px 40px 16px;
+    padding: 10px 0 16px 40px;
     list-style: none;
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: 100%;
+    max-width: 100%;
 }
 
 /* Display list items side by side */
 #breadcrumb li {
-    display: inline;
+  display: inline;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
@@ -97,14 +97,14 @@ nav h1 a {
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none;
+  color: #0275d8;
+  text-decoration: none;
 }
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
+  color: #01447e;
+  text-decoration: underline;
 }
 /* ====================== Map ====================== */
 #map {
@@ -175,8 +175,10 @@ nav h1 a {
   border: none;
   color: #fff;
   display: inline-block;
-  font-size: 12px;
-  margin: 5px 0 0;
+	width: 100%;
+  font-size: 14px;
+	font-weight: bold;
+  margin: 20px 0 0;
   padding: 8px 30px 10px;
   text-align: center;
   text-decoration: none;
@@ -208,13 +210,14 @@ nav h1 a {
 #restaurant-name {
   color: #333;
   font-weight: 200;
-	font-size: 32px;
+	font-size: 20px;
 	text-align: center;
   letter-spacing: 0;
   margin: 15px 0 30px;
   text-transform: uppercase;
   line-height: 1.1;
 	padding-top: 10px;
+	padding-bottom: 20px;
 }
 #restaurant-img {
 	width: 100%;
