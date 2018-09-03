@@ -19,10 +19,23 @@ let cacheFiles = [
 
 self.addEventListener("install", function(e){
   console.log("SW is installed");
-})
-self.addEventListener("activate", function(e){
-  console.log("SW is activated");
-})
+  e.waitUntil(caches.open(currentCache)
+    .then(function(cache){
+      console.log("Serviceworker is adding all cacheFiles");
+      return cache.addAll(cacheFiles);
+    })
+    .catch(function(err){
+      console.log("An error occurred: ", err);
+    })
+  )
+});
+
 self.addEventListener("fetch", function(e){
   console.log("SW is fetching", e.request.url);
-})
+  e.respondWith(
+    caches.match(e.request)
+      .then(function(response){
+        return response || fetch (e.request);
+      })
+  );
+});
