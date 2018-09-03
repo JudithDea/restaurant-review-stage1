@@ -39,7 +39,10 @@ self.addEventListener("fetch", function(e){
   e.respondWith(
     caches.match(e.request)
       .then(function(response){
-        return response || fetch (e.request);
+        if (response) {
+        return response;
+        }
+        return fetch(e.request);
       })
       .catch(function(err){
         console.log("SW couldn't fetch files:", err);
