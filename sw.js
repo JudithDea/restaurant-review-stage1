@@ -6,6 +6,7 @@ let currentCache = "v1";
 let cacheFiles = [
   "index.html",
   "restaurant.html",
+  "/",
   "/js/main.js",
   "/js/restaurant_info.js",
   "/js/dbhelper.js",
