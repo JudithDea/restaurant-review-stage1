@@ -25,17 +25,20 @@ self.addEventListener("install", function(e){
       return cache.addAll(cacheFiles);
     })
     .catch(function(err){
-      console.log("An error occurred: ", err);
+      console.log("SW couldn't install: ", err);
     })
-  )
+  );
 });
 
 self.addEventListener("fetch", function(e){
-  console.log("SW is fetching", e.request.url);
+  console.log("SW is fetching");
   e.respondWith(
     caches.match(e.request)
       .then(function(response){
         return response || fetch (e.request);
+      })
+      .catch(function(err){
+        console.log("SW couldn't fetch files:", err);
       })
   );
 });
