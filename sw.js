@@ -1,3 +1,7 @@
+// As a guideline for this file I refered to Jake Archibald's
+// Simple Service Worker Tutorial:
+// https://github.com/jakearchibald/simple-serviceworker-tutorial/blob/gh-pages/sw.js
+
 let currentCache = "v1";
 let cacheFiles = [
   "index.html",
